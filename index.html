@@ -1,1 +1,101 @@
-Hello World
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gao, Wenjie</title>
+
+    <link rel="stylesheet" href="stylesheets/main.css">
+
+    <!-- icons from bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+
+    <script src='https://unpkg.com/react@18/umd/react.production.min.js'></script>
+    <script src='https://unpkg.com/react-dom@18/umd/react-dom.production.min.js'></script>
+
+    <!-- This next CDN for using JSX (JS extension for react)-->
+    <script src='https://unpkg.com/babel-standalone@6.26.0/babel.js'></script>
+
+    <!-- React Routing -->
+    <script src='https://unpkg.com/react-router-dom@5.0.0/umd/react-router-dom.min.js'></script>
+
+
+
+
+</head>
+
+<body>
+    <div id="root"></div>
+    <script type="text/babel">
+        "use strict";
+
+        const Link = ReactRouterDOM.Link;
+        const Route = ReactRouterDOM.Route;
+
+        function Home() {
+            return (
+                <div>
+                    <h1>
+                        <span>Wenjie Gao</span>
+                    </h1>
+                    <p>
+                        Hello! I'm Wenjie Gao, a passionate and driven computer science student set to graduate from Temple University
+                        this year. Throughout my academic journey, I've honed my skills in coding, problem-solving, and
+                        software development, gaining a deep understanding of various programming languages and technologies.
+                        I'm actively looking for projects and internships to apply theoretical knowledge to real-world scenarios
+                        and collaborate with diverse teams to deliver innovative solutions. With a solid foundation in computer
+                        science principles and a hunger for continuous learning, I'm excited to embark on the next chapter of
+                        my career to leverage my expertise to tackle complex challenges and make meaningful contributions to the
+                        tech industry.
+                    </p>
+                </div>
+            );
+        }
+
+        function Resume() {
+            return (
+                <embed id="resume-viewer" src="Wenjie_Gao_Resume.pdf" type="application/pdf" />
+            );
+        }
+
+        function Inventory() {
+            return (
+                <div id="links">
+                    <a href="http://www.linkedin.com/in/wenjie-gao-4204a21b8"><i class="bi bi-linkedin"></i></a>
+                    <a href="https://github.com/smolGao" target="_blank"><i class="bi bi-github"></i></a>
+                    <a href="mailto:wenjiegao1@gmail.com"><i class="bi bi-mailbox"></i></a> 
+                </div>
+            );
+        }
+
+        const App = () => (
+            <ReactRouterDOM.HashRouter>
+                <div id="profile-nav">
+                    <header>
+                        <img src="https://media.licdn.com/dms/image/C4D03AQGDTDSUaO2BhQ/profile-displayphoto-shrink_800_800/0/1601082872404?e=1715212800&v=beta&t=2KbLX61cUEzp9JCo3obo-Fcss55deRhN7ro6xM9PQuc" alt="profile image" />
+                        <p>Wenjie Gao</p>
+                    </header>
+                    <nav>
+                        <ul>
+                            <li><Link to="/">About</Link></li>
+                            <li><Link to="/resume">Resume</Link></li>
+                            <li><Link to="/inventory">Inventory</Link></li>
+                        </ul>
+                    </nav>
+                </div>
+
+                <section id="content">
+                    <Route path="/" exact component={Home} />
+                    <Route path="/resume" exact component={Resume} />
+                    <Route path="/inventory" exact component={Inventory} />
+                </section>
+            </ReactRouterDOM.HashRouter >
+        );
+
+        ReactDOM.render(<App />, document.getElementById('root'));
+
+    </script>
+</body>
+
+</html>
