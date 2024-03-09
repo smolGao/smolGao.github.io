@@ -33,7 +33,7 @@ a {
 
 #root header {
     height: 100%;
-    width: 40%;
+    width: 30%;
 }
 
 #root header p {
@@ -57,7 +57,7 @@ a {
 }
 
 #root #profile-nav nav {
-    width: 60%;
+    width: 70%;
 }
 
 #root #profile-nav nav ul {
@@ -68,13 +68,12 @@ a {
 }
 
 #root #profile-nav nav ul li {
-    margin: .5rem;
+    margin: .2rem;
     display: inline;
 }
 
 
 #root #profile-nav nav ul li a {
-    font-size: 1.25rem;
     text-decoration: none;
 }
 
@@ -168,6 +167,13 @@ a {
         margin-left: 1rem;
     }
 
+    #root #profile-nav nav ul li {
+        margin: 0.25rem;
+    }
+
+    #root #profile-nav nav ul li a {
+        font-size: 1.25rem;
+    }
 
 }
 
