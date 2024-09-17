@@ -1,0 +1,51 @@
+#content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--bg-color1);
+    margin-top: 1rem;
+
+    height: calc(85% - 1rem);
+    width: 100%;
+
+    padding: 1rem;
+
+    background-color: var(--bg-color1);
+
+    border: 0.25rem double black;
+    border-radius: .5rem;
+}
+
+#content h1 {
+    text-align: center;
+}
+
+#content p {
+    text-indent: 4ch;
+}
+
+#content #resume-viewer {
+    height: 100%;
+    width: 100%;
+}
+
+#content #links {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#content #links .bi {
+    font-size: 3rem;
+}
+
+
+@media screen and (min-width: 768px) {
+    #content {
+        margin: 0;
+        height: 100%;
+        width: 75%;
+    }
+}
